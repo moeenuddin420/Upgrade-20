@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>G-ZONE ESPORTS - Official Platform</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root { 
+            --bg-dark: #0f172a; 
+            --card-bg: #1e293b;
+            --primary: #38bdf8; 
+            --text-main: #f8fafc; 
+            --text-muted: #94a3b8; 
+            --border: #334155;
+            --tg-color: #24A1DE;
+        }
+
+        * { box-sizing: border-box; }
+
+        body { 
+            background-color: var(--bg-dark); 
+            color: var(--text-main); 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            margin: 0; padding: 0;
+            display: block;
+            line-height: 1.6;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* 1. HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(15, 23, 42, 0.9);
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .header-logo-small {
+            width: 28px; height: 28px;
+            border-radius: 4px;
+        }
+
+        .official-badge {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+            padding: 3px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* 2. HERO SECTION */
+        .hero {
+            padding: 40px 20px 20px 20px;
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .app-icon-main {
+            width: 80px; height: 80px;
+            border-radius: 18px;
+            margin-bottom: 15px;
+        }
+
+        h1 { font-size: 1.8rem; margin: 0; font-weight: 800; }
+        
+        .subtitle {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .description {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin: 20px 0;
+        }
+
+        /* 3. FEATURES */
+        .features-list {
+            text-align: left;
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .feature-item {
+            background: var(--card-bg);
+            padding: 12px 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 1px solid var(--border);
+            font-size: 0.85rem;
+        }
+
+        .feature-item i { color: var(--primary); width: 20px; text-align: center; }
+
+        /* 4. INSTALL AREA */
+        .action-area {
+            padding: 20px;
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .btn-install { 
+            background: var(--primary); 
+            color: #0f172a; 
+            font-weight: 700; 
+            padding: 16px; 
+            border-radius: 10px; 
+            font-size: 1rem; 
+            border: none; 
+            cursor: pointer;
+            width: 100%;
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            transition: opacity 0.2s;
+        }
+
+        .btn-install:active { opacity: 0.8; transform: translateY(1px); }
+
+        .pwa-note {
+            margin-top: 12px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* 5. CONTACT & COMMUNITY (NEW) */
+        .community-section {
+            margin: 40px 20px;
+            padding: 20px;
+            background: var(--card-bg);
+            border-radius: 15px;
+            border: 1px solid var(--border);
+            max-width: 500px;
+            margin-left: auto; margin-right: auto;
+        }
+
+        .community-section h2 {
+            font-size: 1.1rem;
+            margin: 0 0 10px 0;
+            text-align: center;
+        }
+
+        .community-desc {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--bg-dark);
+            padding: 12px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            font-size: 0.85rem;
+        }
+
+        .contact-link i { color: var(--tg-color); font-size: 1.2rem; }
+
+        .anti-scam-note {
+            text-align: center;
+            font-size: 0.7rem;
+            color: #64748b;
+            margin-top: 20px;
+            padding: 0 10px;
+        }
+
+        /* 6. FOOTER */
+        footer {
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            background: #0a0f1d;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .footer-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-list li::after { content: "•"; margin-left: 10px; opacity: 0.5; }
+        .footer-list li:last-child::after { content: ""; }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-brand">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAQtXn2gmgLcg4A-wuYXv-lPw7mZ3KXSUcIFVFSDy0NNqqU8bSc5gVAoqE&s=10" class="header-logo-small" alt="G-Zone Logo">
+            <span>G-ZONE ESPORTS</span>
+        </div>
+        <div class="official-badge">Official Site</div>
+    </header>
+
+    <main class="hero">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAQtXn2gmgLcg4A-wuYXv-lPw7mZ3KXSUcIFVFSDy0NNqqU8bSc5gVAoqE&s=10" class="app-icon-main" alt="G-Zone App">
+        
+        <h1>G-ZONE ESPORTS</h1>
+        <span class="subtitle">বাংলাদেশ ভিত্তিক টুর্নামেন্ট প্ল্যাটফর্ম</span>
+        
+        <p class="description">
+            অফিসিয়াল প্ল্যাটফর্মে যোগ দিয়ে কাস্টম টুর্নামেন্টে অংশগ্রহণ করুন। আমাদের প্ল্যাটফর্মটি ফেয়ার-প্লে এবং স্বচ্ছতার সাথে পরিচালিত।
+        </p>
+
+        <div class="features-list">
+            <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>কমিউনিটি-চালিত টুর্নামেন্ট সিস্টেম</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-user-shield"></i>
+                <span>ম্যানুয়াল ভেরিফিকেশন ও সিকিউর এনভায়রনমেন্ট</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-microchip"></i>
+                <span>সকল স্মার্টফোনে ব্যবহারের উপযোগী</span>
+            </div>
+        </div>
+    </main>
+
+    <section class="action-area">
+        <button id="btn-install-app" class="btn-install">
+            <i class="fas fa-download"></i> Install Official G-ZONE App
+        </button>
+        
+        <p class="pwa-note">
+            এটি ব্রাউজার থেকে সরাসরি ইন্সটল হবে। কোনো APK ফাইল ডাউনলোডের প্রয়োজন নেই।
+        </p>
+    </section>
+
+    <section id="contact-and-community" class="community-section">
+        <h2>Official Contact & Community</h2>
+        <p class="community-desc">যেকোনো সহায়তা বা আপডেটের জন্য আমাদের অফিসিয়াল চ্যানেলগুলো ব্যবহার করুন।</p>
+        
+        <div class="contact-links">
+            <a href="https://t.me/moeenu321" target="_blank" rel="noopener noreferrer" class="contact-link">
+                <span><i class="fab fa-telegram-plane"></i> Telegram Support</span>
+                <span style="color: var(--text-muted)">@moeenu321</span>
+            </a>
+            <a href="https://t.me/FFTournamentBD123" target="_blank" rel="noopener noreferrer" class="contact-link">
+                <span><i class="fas fa-users"></i> Official Group</span>
+                <span style="color: var(--text-muted)">FFTournamentBD</span>
+            </a>
+        </div>
+
+        <div class="anti-scam-note">
+            This is the official G-ZONE ESPORTS application. We only communicate via the official Telegram accounts listed above.
+        </div>
+    </section>
+
+    <footer>
+        <ul class="footer-list">
+            <li>Secure & Verified Build</li>
+            <li>No APK Distribution</li>
+            <li>Version 2.0</li>
+        </ul>
+        <p style="margin-top: 15px;">&copy; 2024 G-ZONE ESPORTS • All Rights Reserved</p>
+    </footer>
+
+    <script>
+        let deferredPrompt;
+        const installBtn = document.getElementById('btn-install-app');
+        const originalText = installBtn.innerHTML;
+
+        // Listen for the PWA install prompt
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            console.log("PWA: System Ready");
+        });
+
+        // Trigger Install
+        installBtn.addEventListener('click', async () => {
+            if (deferredPrompt) {
+                installBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Install prompt opening...';
+                
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                
+                console.log(`User outcome: ${outcome}`);
+                deferredPrompt = null;
+                installBtn.innerHTML = originalText;
+            } else {
+                // Professional inline-style alert (fallback)
+                const fallbackInfo = "ইন্সটল করতে: আপনার ব্রাউজারের উপরে '৩টি ডট (⋮)' বাটনে ক্লিক করুন এবং 'Install App' বা 'Add to Home Screen' অপশনটি বেছে নিন।";
+                alert(fallbackInfo);
+            }
+        });
+
+        // Standalone Mode Detection (Auto-redirect)
+        if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
+            window.location.href = 'app.html';
+        }
+    </script>
+</body>
+</html>
